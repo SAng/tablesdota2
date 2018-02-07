@@ -26,30 +26,15 @@ function remove(comment) {
 }
 
 
+function copy() {
+  var copyTextarea = document.querySelector('#text');
+  copyTextarea.select();
 
-var buttonremove = document.querySelector('#buttonremove');
-
-// buttonremove.addEventListener('click', function(event) {
-//   remove(false)
-// });
-
-var buttoncomment = document.querySelector('#buttoncomment');
-
-// buttoncomment.addEventListener('click', function(event) {
-//   remove(true)
-// });
-
-// var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
-
-// copyTextareaBtn.addEventListener('click', function(event) {
-//   var copyTextarea = document.querySelector('#text');
-//   copyTextarea.select();
-
-//   try {
-//     var successful = document.execCommand('copy');
-//     var msg = successful ? 'successful' : 'unsuccessful';
-//     console.log('Copying text command was ' + msg);
-//   } catch (err) {
-//     console.log('Oops, unable to copy');
-//   }
-// });
+  try {
+    var successful = document.execCommand('copy');
+    var msg = successful ? 'successful' : 'unsuccessful';
+    console.log('Copying text command was ' + msg);
+  } catch (err) {
+    console.log('Oops, unable to copy');
+  }
+};
