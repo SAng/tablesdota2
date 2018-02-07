@@ -1,38 +1,43 @@
-let y =0;
-
-function remove() {
-let lines = $("#text").val().split('\n');
-    let newlines="";
-    for(var i = 0;i < lines.length;i++){
-      newlinearr = lines[i].split(' ')
-      newline ="";
-      for(var o = 0;o < newlinearr.length;o++){
-				if (o) {
-          newline+=(newlinearr[o] +" ")
-				} else {
-           if ($(this).innerHTML = "Comment first word") {
-              newline +=("/*"+newlinearr[o]+"*\/ ")
-           }
+function remove(comment) {
+  let lines = document.getElementById("text").value.split('\n');
+  let newlines = "";
+  for (var i = 0; i < lines.length; i++) {
+    newlinearr = lines[i].split(' ')
+    newline = "";
+    for (var o = 0; o < newlinearr.length; o++) {
+      if (o) {
+        newline += (newlinearr[o] + " ")
+      } else {
+        if (comment) {
+          newline += ("/*" + newlinearr[o] + "*\/ ")
         }
       }
-      if (newline.length) {
-      	newline = newline.slice(0, -1);
-      }
-      newlines+=(newline+"\n")
     }
-      if (newlines.length) {
-      	newlines = newlines.slice(0, -1);
-      }
-    $('#text').val(newlines);
+    if (newline.length) {
+      newline = newline.slice(0, -1);
+    }
+    newlines += (newline + "\n")
+  }
+  if (newlines.length) {
+    newlines = newlines.slice(0, -1);
+  }
+  document.getElementById("text").value = newlines
 
- y++
 }
 
-$('#buttonremove').click(remove);
-$('#buttoncomment').click(remove);
 
 
+var buttonremove = document.querySelector('#buttonremove');
 
+buttonremove.addEventListener('click', function(event) {
+  remove(false)
+});
+
+var buttoncomment = document.querySelector('#buttoncomment');
+
+buttoncomment.addEventListener('click', function(event) {
+  remove(true)
+});
 
 var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
 
