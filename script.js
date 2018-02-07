@@ -8,7 +8,7 @@ function remove(comment) {
       if (o) {
         newline += (newlinearr[o] + " ")
       } else {
-        if (comment) {
+        if (this.innerHTML == "Comment first word") {
           newline += ("/*" + newlinearr[o] + "*\/ ")
         }
       }
