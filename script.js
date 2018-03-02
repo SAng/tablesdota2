@@ -4,12 +4,12 @@ function remove(comment) {
   for (var i = 0; i < lines.length; i++) {
     newlinearr = lines[i].split(' ')
     newline = "";
-    for (var o = 0; o < newlinearr.length; o++) {
-      if (o) {
-        newline += (newlinearr[o] + " ")
+    for (var j = 0; j < newlinearr.length; j++) {
+      if (j) {
+        newline += (newlinearr[j] + " ")
       } else {
         if (this.innerHTML == "Comment first word") {
-          newline += ("/*" + newlinearr[o] + "*\/ ")
+          newline += ("/*" + newlinearr[j] + "*\/ ")
         }
       }
     }
@@ -31,11 +31,11 @@ function comment() {
   for (var i = 0; i < lines.length; i++) {
     newlinearr = lines[i].split(' ')
     newline = "";
-    for (var o = 0; o < newlinearr.length; o++) {
-      if (o) {
-        newline += (newlinearr[o] + " ")
+    for (var j = 0; j < newlinearr.length; o++) {
+      if (j) {
+        newline += (newlinearr[j] + " ")
       } else {
-          newline += ("/*" + newlinearr[o] + "*\/ ")
+          newline += ("/*" + newlinearr[j] + "*\/ ")
 
       }
     }
