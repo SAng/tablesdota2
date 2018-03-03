@@ -2,7 +2,7 @@ function remove(comment) {
   let lines = document.getElementById("text").value.split('\n');
   let newlines = "";
   for (var i = 0; i < lines.length; i++) {
-    lines.trim();
+    lines[i].trim();
     newlinearr = lines[i].split(' ')
     newline = "";
     for (var j = 0; j < newlinearr.length; j++) {
