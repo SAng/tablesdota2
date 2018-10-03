@@ -3,7 +3,7 @@ function execute(comment) {
   let newlines = "";
   for (var i = 0; i < lines.length; i++) {
     lines[i]=lines[i].trim();
-
+  }
     newline = "";
     for (var j = 0; j < newlinearr.length; j++) {
  
