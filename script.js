@@ -1,24 +1,14 @@
 function execute() {
-  let lines = document.getElementById("text").value.split('\n');
-  let newlines = "";
+  var lines = document.getElementById("text").value.split('\n');
+  var newlines = "";
+  console.log(lines.length)
   for (var i = 0; i < lines.length; i++) {
-    lines[i]=lines[i].trim();
-  }
-    newline = "";
-    for (var j = 0; j < lines.length; j++) {
-    if (lines[j]){
-        newline += ('"' + lines[j])
-      
-
-    newlines += (newline)
-      if ((j+1) !== lines.length) {
-        newline+='" OR\n';
+      newlines+=("\"" +lines[i].trim()+"\"")
+        if ((i+1) !== lines.length) {
+          newlines+=" dddOR\n";
+        }
     }
-    }
-  }
-
   document.getElementById("text").value = newlines
-
 }
   
 
