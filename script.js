@@ -3,52 +3,18 @@ function remove(comment) {
   let newlines = "";
   for (var i = 0; i < lines.length; i++) {
     lines[i]=lines[i].trim();
-    console.log(lines[i]);
-    newlinearr = lines[i].split(' ')
+
     newline = "";
     for (var j = 0; j < newlinearr.length; j++) {
-      if (j) {
-        newline += (newlinearr[j] + " ")
-      } else {
-        if (this.innerHTML == "Comment first word") {
-          newline += ("/*" + newlinearr[j] + "*\/ ")
-        }
-      }
-    }
-    if (newline.length) {
-      newline = newline.slice(0, -1);
-    }
-    newlines += (newline + "\n")
-  }
-  if (newlines.length) {
-    newlines = newlines.slice(0, -1);
-  }
-  document.getElementById("text").value = newlines
+ 
+        newline += ('"' + newlinearr[j])
+      
 
-}
-
-function comment() {
-  let lines = document.getElementById("text").value.split('\n');
-  let newlines = "";
-  for (var i = 0; i < lines.length; i++) {
-    newlinearr = lines[i].split(' ')
-    newline = "";
-    for (var j = 0; j < newlinearr.length; o++) {
-      if (j) {
-        newline += (newlinearr[j] + " ")
-      } else {
-          newline += ("/*" + newlinearr[j] + "*\/ ")
-
-      }
-    }
-    if (newline.length) {
-      newline = newline.slice(0, -1);
-    }
-    newlines += (newline + "\n")
+    newlines += (newline)
+      if ((j+1) !== newlinearr.length) {
+        newline+='" OR';
   }
-  if (newlines.length) {
-    newlines = newlines.slice(0, -1);
-  }
+
   document.getElementById("text").value = newlines
 
 }
