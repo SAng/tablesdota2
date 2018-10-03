@@ -5,13 +5,13 @@ function execute() {
     lines[i]=lines[i].trim();
   }
     newline = "";
-    for (var j = 0; j < newlinearr.length; j++) {
+    for (var j = 0; j < lines.length; j++) {
  
-        newline += ('"' + newlinearr[j])
+        newline += ('"' + lines[j])
       
 
     newlines += (newline)
-      if ((j+1) !== newlinearr.length) {
+      if ((j+1) !== lines.length) {
         newline+='" OR';
   }
     }
