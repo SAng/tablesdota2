@@ -1,4 +1,4 @@
-function remove(comment) {
+function execute(comment) {
   let lines = document.getElementById("text").value.split('\n');
   let newlines = "";
   for (var i = 0; i < lines.length; i++) {
