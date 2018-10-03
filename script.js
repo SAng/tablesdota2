@@ -3,11 +3,13 @@ function execute() {
   var newlines = "";
   console.log(lines.length)
   for (var i = 0; i < lines.length; i++) {
+    if (lines[i].trim().length) {
       newlines+=("\"" +lines[i].trim()+"\"")
         if ((i+1) !== lines.length) {
-          newlines+=" dddOR\n";
+          newlines+=" OR\n";
         }
     }
+  }
   document.getElementById("text").value = newlines
 }
   
