@@ -6,16 +6,16 @@ function execute() {
   }
     newline = "";
     for (var j = 0; j < lines.length; j++) {
- if (lines[i]){
+    if (lines[j]){
         newline += ('"' + lines[j])
       
 
     newlines += (newline)
       if ((j+1) !== lines.length) {
         newline+='" OR\n';
-  }
- }
     }
+    }
+  }
 
   document.getElementById("text").value = newlines
 
