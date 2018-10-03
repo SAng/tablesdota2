@@ -14,10 +14,12 @@ function execute(comment) {
       if ((j+1) !== newlinearr.length) {
         newline+='" OR';
   }
+    }
 
   document.getElementById("text").value = newlines
 
 }
+  
 
 function copy() {
   var copyTextarea = document.querySelector('#text');
