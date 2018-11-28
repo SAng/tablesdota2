@@ -6,7 +6,7 @@ function execute() {
     if (lines[i].trim().length) {
       newlines+=("\"" +lines[i].trim()+"\"")
         if ((i+1) !== lines.length) {
-          newlines+=" OR\n";
+          newlines+=", ";
         }
     }
   }
