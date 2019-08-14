@@ -50,6 +50,11 @@ function execute() {
       cell17.innerHTML = bonusString;
 
        cell17.style.backgroundColor =  card.bonuses.length > 3 ? "gold": "silver";
+    var c18 = row.insertCell(18);
+    var c19 = row.insertCell(19);
+    
+    cell18.innerHTML = Number(((bonuses-sum)/sum).toFixed(4));
+    cell19.innerHTML = Number((bonuses-sum).toFixed(4));
 
   }
 }
