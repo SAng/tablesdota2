@@ -53,8 +53,8 @@ function execute() {
     var c18 = row.insertCell(18);
     var c19 = row.insertCell(19);
     
-    cell18.innerHTML = Number(((bonuses-sum)/sum).toFixed(4));
-    cell19.innerHTML = Number((bonuses-sum).toFixed(4));
+    c18.innerHTML = Number(((bonuses-sum)/sum).toFixed(4));
+    c19.innerHTML = Number((bonuses-sum).toFixed(4));
 
   }
 }
