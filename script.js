@@ -6,8 +6,8 @@ function execute() {
 var tableRef = table.getElementsByTagName('tbody')[0];
   
 
-  for (var k=1; k<table.rows.length; k++) {
-      table.deleteRow(k);
+  for (var k=0; k<tableRef.rows.length; k++) {
+      tableRef.deleteRow(k);
       k--;
   }
   for (var i=0; i<cards.cards.length; i++) {
