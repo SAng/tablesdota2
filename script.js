@@ -65,6 +65,7 @@ function execute() {
     c19.innerHTML = Number((sum-carddata[4]).toFixed(4));
 
   }
+  $('#myTable').DataTable();
 }
 
 function sortTable(n) {
