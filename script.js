@@ -3,7 +3,7 @@ function execute() {
   var cards = JSON.parse(document.getElementById("text").value);
   var table = document.getElementById("myTable");
   
-
+var tableRef = table.getElementsByTagName('tbody')[0];
   
 
   for (var k=1; k<table.rows.length; k++) {
@@ -15,7 +15,7 @@ function execute() {
       if (card.bonuses.length == 0) {
         break;
       }
-      var row = table.insertRow(i+1);
+      var row = tableRef.insertRow(i+1);
 
       var carddata;
       for (var j=0; j<data.length; j++) {
