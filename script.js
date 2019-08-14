@@ -15,7 +15,7 @@ var tableRef = table.getElementsByTagName('tbody')[0];
       if (card.bonuses.length == 0) {
         break;
       }
-      var row = tableRef.insertRow(i+1);
+      var row = tableRef.insertRow(i);
 
       var carddata;
       for (var j=0; j<data.length; j++) {
