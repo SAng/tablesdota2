@@ -7,7 +7,7 @@ function execute() {
       if (card.bonuses.length == 0) {
         break;
       }
-      var row = table.insertRow(i);
+      var row = table.insertRow(i+1);
 
       var carddata;
       for (var j=0; j<data.length; j++) {
@@ -52,7 +52,7 @@ function execute() {
 
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById("myTable2");
+  table = document.getElementById("myTable");
   switching = true;
   // Set the sorting direction to ascending:
   dir = "asc"; 
