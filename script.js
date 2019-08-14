@@ -62,6 +62,17 @@ function execute() {
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
   table = document.getElementById("myTable");
+  
+
+  for (var k=1; k<table.rows.length; k++) {
+    if (table.rows[k].style.display == "none") {
+      table.deleteRow(k);
+      k--;
+    };
+  }
+  
+  
+  
   switching = true;
   // Set the sorting direction to ascending:
   dir = "asc"; 
