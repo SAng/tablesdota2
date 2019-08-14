@@ -31,8 +31,13 @@ function execute() {
       }
       var bonuses = 0;
       for (var l=0; l<card.bonuses.length; l++) {
+
         var bonus = card.bonuses[l];
-        console.log(carddata[bonus.bonus_stat+5]*bonus.bonus_value/100);
+        var cell = row.cells[bonus.bonus_stat+3];
+
+         var points = carddata[bonus.bonus_stat+5]*(1 + bonus.bonus_value/100);
+        cell.innerHTML = Number((points).toFixed(4));
+        
         sum+=carddata[bonus.bonus_stat+5]*bonus.bonus_value/100;
         bonuses+=carddata[bonus.bonus_stat+5]*bonus.bonus_value/100;
       }
@@ -40,21 +45,7 @@ function execute() {
       var cell16 = row.insertCell(16);
       var cell17 = row.insertCell(17);
       cell15.innerHTML = carddata[4];
-      cell16.innerHTML = "     ";
+      cell16.innerHTML = "Effective: ";
       cell17.innerHTML = Number((sum).toFixed(4));
   }
 }
-  
-
-function copy() {
-  var copyTextarea = document.querySelector('#text');
-  copyTextarea.select();
-
-  try {
-    var successful = document.execCommand('copy');
-    var msg = successful ? 'successful' : 'unsuccessful';
-    console.log('Copying text command was ' + msg);
-  } catch (err) {
-    console.log('Oops, unable to copy');
-  }
-};
