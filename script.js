@@ -94,13 +94,13 @@ function sortTable(n) {
       /* Check if the two rows should switch place,
       based on the direction, asc or desc: */
       if (dir == "asc") {
-        if (x.innerHTML > y.innerHTML) {
+        if (Number(x.innerHTML) > Number(y.innerHTML)) {
           // If so, mark as a switch and break the loop:
           shouldSwitch = true;
           break;
         }
       } else if (dir == "desc") {
-        if (x.innerHTML< y.innerHTML) {
+        if (Number(x.innerHTML)< Number(y.innerHTML)) {
           // If so, mark as a switch and break the loop:
           shouldSwitch = true;
           break;
