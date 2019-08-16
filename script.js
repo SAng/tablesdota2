@@ -56,12 +56,13 @@ var tableRef = table.getElementsByTagName('tbody')[0];
       var cell17 = row.insertCell(17);
       cell15.innerHTML = carddata[4];
       cell16.innerHTML = Number((sum).toFixed(4));
+        if (card.bonuses.length == 0) {
+      bonusString = "None";
+    }
       cell17.innerHTML = bonusString;
 
        cell17.style.backgroundColor =  card.bonuses.length == 0 ? "purple" : (card.bonuses.length > 3 ? "gold": "silver");
-    if (card.bonuses.length == 0) {
-      bonusString = "None";
-    }
+
     var c18 = row.insertCell(18);
     var c19 = row.insertCell(19);
     
