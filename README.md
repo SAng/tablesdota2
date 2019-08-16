@@ -1,5 +1,5 @@
 # Effective Card Bonuses
 
 
-see [here](https://sang.github.io/dotaFantasyEffectiveStats/)
+see [here](https://sang.github.io/tablesdota2/)
 
