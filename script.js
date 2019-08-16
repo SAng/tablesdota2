@@ -5,7 +5,7 @@ function execute(dataNumber) {
   }
     var cards = JSON.parse(document.getElementById("text").value);
   var table = document.getElementById("myTable");
-  
+  var normalCards = [];
 var tableRef = table.getElementsByTagName('tbody')[0];
    document.getElementById("message").innerHTML = "Loading";
 
@@ -15,9 +15,7 @@ var tableRef = table.getElementsByTagName('tbody')[0];
   }
   for (var i=0; i<cards.cards.length; i++) {
           var card = cards.cards[i];
-      if (card.bonuses.length == 0) {
-        break;
-      }
+
       var row = tableRef.insertRow(i);
 
       var carddata;
@@ -60,7 +58,7 @@ var tableRef = table.getElementsByTagName('tbody')[0];
       cell16.innerHTML = Number((sum).toFixed(4));
       cell17.innerHTML = bonusString;
 
-       cell17.style.backgroundColor =  card.bonuses.length > 3 ? "gold": "silver";
+       cell17.style.backgroundColor =  card.bonuses.length == 0 ? "purple" : (card.bonuses.length > 3 ? "gold": "silver");
     var c18 = row.insertCell(18);
     var c19 = row.insertCell(19);
     
