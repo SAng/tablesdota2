@@ -59,6 +59,9 @@ var tableRef = table.getElementsByTagName('tbody')[0];
       cell17.innerHTML = bonusString;
 
        cell17.style.backgroundColor =  card.bonuses.length == 0 ? "purple" : (card.bonuses.length > 3 ? "gold": "silver");
+    if (card.bonuses.length == 0) {
+      bonusString = "None";
+    }
     var c18 = row.insertCell(18);
     var c19 = row.insertCell(19);
     
